@@ -62,3 +62,13 @@ body {
     background-color: #BB4120;
     color: white;
 }
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input {
+    border-width: 2px !important;
+}
+
