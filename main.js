@@ -1,7 +1,10 @@
+//Initializing somne glovbal variables and getting the input elements
 const siteNameInput = document.getElementById("siteName");
 const siteURLInput = document.getElementById("siteURL");
 var sites = [];
 
+
+// main code that runs when the page loads
 if (localStorage.getItem("sites") != null) {
   sites = JSON.parse(localStorage.getItem("sites"));
   displaySites();
@@ -36,6 +39,8 @@ siteURLInput.addEventListener("input", () => {
   }
 });
 
+
+// Functions section to add sites, display them, delete them, and validate inputs
 function addSites() {
   var SiteName = document.getElementById("siteName").value;
   var SiteURL = document.getElementById("siteURL").value;
@@ -49,6 +54,7 @@ function addSites() {
     url: SiteURL,
   };
 
+  // Validating the inputs to to show alerts if they are not valid
   if (SiteName === "" || SiteURL === "") {
     alert("Please fill in both fields.");
     return;
